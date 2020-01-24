@@ -7,7 +7,7 @@ jobs:
       # Primary container image where all steps run.
       - image: district0x/cljs-dev
       # Secondary container image on common network.
-      - image: justinribeiro/chrome-headless:latest
+      - image: browserless/chrome:latest
     steps:
       - checkout
       - restore_cache:
