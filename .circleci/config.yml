@@ -5,9 +5,7 @@ jobs:
     working_directory: ~/ci
     docker:
       # Primary container image where all steps run.
-      - image: district0x/cljs-dev
-      # Secondary container image on common network.
-      - image: selenium/standalone-chrome:latest
+      - image: district0x/cljs-dev:latest
     steps:
       - checkout
       - restore_cache:
