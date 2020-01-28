@@ -7,7 +7,7 @@ jobs:
       # Primary container image where all steps run.
       - image: district0x/cljs-dev:latest
       # Secondary container image on common network.
-      # - image: selenium/standalone-chrome:3.141.59
+      - image: selenium/standalone-chrome:3.141.59
     environment:
       - CHROME_BIN=/usr/bin/google-chrome
     steps:
@@ -26,8 +26,11 @@ jobs:
             - ./node_modules/
       - run:
           name: Install chrome
-          command: wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb && dpkg -i google-chrome-stable_current_amd64.deb && apt-get -fy install
+          command: |
+            wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+            dpkg -i google-chrome-stable_current_amd64.deb; apt-get -fy install
       - run: lein doo chrome-headless "browser-tests" once
+
   deploy:
    machine: true
    steps:
