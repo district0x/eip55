@@ -6,10 +6,6 @@ jobs:
     docker:
       # Primary container image where all steps run.
       - image: district0x/cljs-dev:latest
-      # Secondary container image on common network.
-      # - image: browserless/chrome
-    # environment:
-    #   - CHROME_BIN=/usr/bin/google-chrome
     steps:
       - checkout
       - restore_cache:

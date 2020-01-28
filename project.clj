@@ -10,7 +10,6 @@
   :doo {:paths {:karma "./node_modules/karma/bin/karma"}}
 
   :npm {:devDependencies [[karma "1.7.1"]
-                          [puppeteer "2.1.0"]
                           [karma-chrome-launcher "2.2.0"]
                           [karma-cli "1.0.1"]
                           [karma-cljs-test "0.1.0"]]}
@@ -35,7 +34,6 @@
                   ["change" "version" "leiningen.release/bump-version" "release"]
                   ["deploy"]]
 
-  ;; lein doo chrome-headless browser-tests once
   :cljsbuild {:builds [{:id "browser-tests"
                         :source-paths ["src" "test"]
                         :compiler {:output-to "tests-output/tests.js"
