@@ -10,6 +10,7 @@
   :doo {:paths {:karma "./node_modules/karma/bin/karma"}}
 
   :npm {:devDependencies [[karma "1.7.1"]
+                          [puppeteer "2.1.0"]
                           [karma-chrome-launcher "2.2.0"]
                           [karma-cli "1.0.1"]
                           [karma-cljs-test "0.1.0"]]}
