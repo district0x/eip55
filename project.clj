@@ -18,7 +18,7 @@
   :profiles {:dev {:dependencies [[org.clojure/clojure "1.10.1"]]
                    :plugins [[lein-npm "0.6.2"]
                              [lein-cljsbuild "1.1.7"]
-                             [lein-doo "0.1.8"]]
+                             [lein-doo "0.1.10"]]
                    :source-paths ["src" "test"]
                    :resource-paths ["resources"]}}
 
