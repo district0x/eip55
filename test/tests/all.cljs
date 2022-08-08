@@ -1,6 +1,5 @@
 (ns tests.all
-  (:require [cljsjs.web3]
-            [cljs.test :refer [deftest is testing run-tests use-fixtures]]
+  (:require [cljs.test :refer [deftest is testing run-tests use-fixtures]]
             [eip55.core :refer [address->checksum]]))
 
 (deftest to-checksum-test
